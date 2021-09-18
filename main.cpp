@@ -2,12 +2,14 @@
 #include <vector>
 #include <iostream>
 #include <cstdlib>
+#include <time.h>
 
 std::vector<std::vector<int> > initialiseMap(int width, int height);//function initialisation, returns a 2d array, takes a 2d array
 std::vector<std::vector<int> > simStep(std::vector<std::vector<int> > oldMap, int width, int height); //"game of life" style simulation
 int countAliveNeighbours(std::vector<std::vector<int> > map, int x, int y); //checks how many of the squares around a certain square are walls
 int main()
 {
+  srand(time(NULL));
   //allows you to change size of map
   int mapXSize = 100;
   int mapYSize = 45;
